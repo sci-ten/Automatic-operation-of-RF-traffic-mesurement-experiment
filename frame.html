@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Youtue自動再生プログラム</title>
+    <link rel="./video_play_part/stylesheet" type="text/css" href="style.css" />
+    <script src="./video_play_part/schdule_playback.js" async></script>
+    <script src="./video_play_part/time_maneger.js" defer></script>
+    <script src="./video_play_part/player_log.js" async></script>
+    <script src="./video_play_part/player_event_function.js" async></script>
+    <script src="./video_play_part/iframe_part.js" async></script>
+
+
+  </head>
+
+  <body>
+    <h1>PLAY Automatically</h1>
+
+    <div id="ytplayer">
+      <h2></h2>
+    </div>
+
+
+    <div class="log" id="log">
+      <h2>Player State Log</h2>
+      <div class="scrollbar_log">
+        <button type="Button" onclick="playerLog.save_log_download()">Download Player Log</button>
+
+      </div>
+
+    </div>
+
+  </body>

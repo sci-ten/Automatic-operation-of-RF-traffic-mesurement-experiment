@@ -1,0 +1,9 @@
+.loglist {
+  overflow:scroll;
+	width:600px; height:400px;
+	padding:5px;
+	border:2px dotted #ffffff;
+	color:#000000;
+	background-color:#F5F5F5;
+	line-height:1.5em;
+}
