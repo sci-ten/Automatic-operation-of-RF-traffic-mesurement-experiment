@@ -65,6 +65,12 @@ class PlayerLogMaker{
 
   }
 
+  save_log(filename){
+    var csvtxt=this.playerLog.join(',\n');
+    var uri='data:text/csv,' + encodeURIComponent(csvtxt);
+    this.downloadDataUri(uri,filename);
+  }
+
   save_log_download(){
     const filename="playerLog.csv";
     //if (!filename.match(/\.csv$/i)) { filename = filename + '.csv' };

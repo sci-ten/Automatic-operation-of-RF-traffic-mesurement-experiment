@@ -35,10 +35,16 @@ class SchdulePlayBack{
 function playVideo(){
   ytplayer.playVideo();
   ytplayer.setPlaybackQuality(player_parameter.quality);
+  console.log(player_parameter.quality);
 }
 
 function stopVideo() {
      ytplayer.pauseVideo();
+     var nowUnixTimeStamp=timer.get_now_unix_time_stamp();
+     var nowTimeStamp=  timer.convert_date(nowUnixTimeStamp);
+     var nowTimeStampString=convert_string_timestamp(nowTimeStamp);
+     var filename="\player-"+ nowTimeStampString+".csv"
+     playerLog.save_log(filename);
      location.reload();
 }
 
@@ -54,7 +60,7 @@ function get_job(job_str){
     return playVideo;
   }else if(job_str.indexOf('stop') !== -1){
     return stopVideo;
-  }else if(job_str.indexOf('stop') !== -1){
+  }else if(job_str.indexOf('pause') !== -1){
     return ytplayer.pauseVideo;
   }else if(job_str.indexOf('reload') !== -1){
     return location.reload;
