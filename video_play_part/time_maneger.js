@@ -67,6 +67,11 @@ function jsont(data){
   console.log("Standerd time by performance()",str);
 };
 
+function sleep(waitMsec) {
+  var startMsec = new Date();
+  while (new Date() - startMsec < waitMsec);
+  console.log("wait 1sec");
+};
 
 
 var timer = new TimeAdjustByPerformance();
